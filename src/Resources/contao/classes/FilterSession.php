@@ -169,7 +169,7 @@ class FilterSession extends \Frontend
             $this->strMarketingType = 'kauf_erbpacht_miete_leasing';
         }
 
-        if (!$submitted)
+        if (!$submitted && $this->objRealEstateTypes)
         {
             while ($this->objRealEstateTypes->next())
             {
