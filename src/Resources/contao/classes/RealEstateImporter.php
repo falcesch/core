@@ -1180,6 +1180,10 @@ class RealEstateImporter extends \BackendModule
                             $index++;
                         }
                         break;
+                    case '~':
+                        // Returns the value of an multiple XML element.
+                        $results[$i] = $xmlNode->__toString();
+                        break;
                     default:
                         // Returns the value of an XML element.
                         $results[$i] = current($attributes)[$attr] ?? null;
